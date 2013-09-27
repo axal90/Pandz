@@ -9,7 +9,7 @@ Template Name: No sidebar
 
 
 
-<div class="c-wrapper no-sidebar">
+<div class="content-wrapper no-sidebar">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		

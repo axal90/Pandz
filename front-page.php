@@ -2,12 +2,12 @@
 <?php get_header(); ?>
 
 
-<div id="featured" class="">
+<div class="featured-wrapper">
 
 	<script type="text/javascript">
 		jQuery(document).ready(function($){
 			
-            $('#featured-slider').responsiveSlides({
+            $('.featured-slider').responsiveSlides({
                 pause: true,
                 speed: 500,
                 timeout: 4000,
@@ -20,7 +20,7 @@
 
 	</script>
 	
-	<div id="featured-slider">
+	<div class="featured-slider">
 	
 		<?php $featured = get_posts(  array ( 
 			'post_type' 		=> array ('page', 'attachment'),
@@ -73,7 +73,7 @@
 
 
 
-<div class="front-c-wrapper bg-light-brown">
+<div class="front-content-wrapper">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		

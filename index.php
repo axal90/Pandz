@@ -5,7 +5,7 @@
 
 
 
-	<div id="posts-list" class="c-wrapper">
+	<div id="posts-list" class="content-wrapper">
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>

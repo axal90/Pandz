@@ -53,7 +53,7 @@
 				<?php } else { ?>
 				
 					<hgroup>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title"><a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 					</hgroup>
 				<?php } ?>
@@ -70,11 +70,3 @@
 				<div class="clear"></div>
 
 			</header>
-
-			
-
-			
-
-			
-
-			<section id="content" class="container_4">
