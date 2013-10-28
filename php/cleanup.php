@@ -433,3 +433,4 @@ function pandz_request_filter($query_vars) {
 
 add_filter('request', 'pandz_request_filter');
 
+?>

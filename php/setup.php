@@ -3,22 +3,8 @@
 
 // Tell the TinyMCE editor to use a custom stylesheet
 add_editor_style( get_template_directory_uri() . '/css/content.css');
-  
-
-/*Register Nav Menus*/
-function register_my_menus() {
-	register_nav_menus(
-		array(
-			'main-menu' => __( 'Main Menu' ),
-		)
-	);
-}
-add_action( 'init', 'register_my_menus' );
-
-
+ 
 /* Theme Support */
-
-add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's fixed navbar
 add_theme_support( 'post-thumbnails' ); 	// Post Thumbnails
 add_theme_support( 'automatic-feed-links' ); // Feedlinks
 
@@ -45,8 +31,7 @@ add_image_size( 'featured-thumb', 961, 272, true );		// Excerpt length
 add_image_size( 'profile-thumb', 50, 67, true );	// Excerpt length
 add_image_size( 'profile', 200, 301, true );		// Excerpt length
 
-/*Register Sidebar*/
-
+/*Register Sidebars*/
 register_sidebar(array(
 	'name' => __( 'Sidebar' ),
 	'id' => 'sidebar',
@@ -72,9 +57,17 @@ register_sidebar(array(
 	'after_title' => '</h3>'
 ));
 
+/*Register Nav Menus*/
+function register_my_menus() {
+	register_nav_menus(
+		array(
+			'main-menu' => __( 'Main Menu' ),
+		)
+	);
+}
+add_action( 'init', 'register_my_menus' );
 
-
-// returns WordPress subdirectory if applicable
+// Returns WordPress subdirectory if applicable
 function wp_base_dir() {
   preg_match('!(https?://[^/|"]+)([^"]+)?!', site_url(), $matches);
   if (count($matches) === 3) {
@@ -116,14 +109,14 @@ if ( ! defined( 'WP_PLUGIN_DIR' ) ) {
 	define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
 }
 
-/*Javascripts and styles*/
+/*Enque Js and styles*/
 function pandz_scripts_method() {
 	wp_enqueue_style('pandz_main_css', get_template_directory_uri() . '/css/main.css', false, null);
 	wp_enqueue_style('pandz_content_css', get_template_directory_uri() . '/css/content.css', array('pandz_main_css'), null);
 	
 	// Load style.css from child theme
 	if (is_child_theme()) {
-		wp_enqueue_style('roots_child', get_stylesheet_uri(), false, null);
+		wp_enqueue_style('zapf_child', get_stylesheet_uri(), false, null);
 	}
 	
 	wp_enqueue_script('jquery');
