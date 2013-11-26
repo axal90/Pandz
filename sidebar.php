@@ -1,3 +1,3 @@
-<aside id="sidebar" class="">
-	<?php dynamic_sidebar( 'sidebar' ); ?>
+<aside id="sidebar" class="">
+	<?php dynamic_sidebar( 'sidebar' ); ?>
 </aside>
