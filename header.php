@@ -102,15 +102,15 @@
 
 				
 
-				<?php } else { ?>
+				<?php } ?>
 
-				
+				<?php if(get_header_textcolor()!='blank') { ?>
 
 					<hgroup>
 
-						<h1 class="site-title"><a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title"><a class="site-title" style="color:#<?php echo get_header_textcolor();?>!important;" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+						<h2 class="site-description"  style="color:#<?php echo get_header_textcolor();?>!important;"><?php bloginfo( 'description' ); ?></h2>
 
 					</hgroup>
 
